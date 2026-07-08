@@ -16,6 +16,24 @@ This project walks through a full classification pipeline — from raw data to a
 6. **Model Fitting & Evaluation** – Train a Random Forest Classifier and evaluate performance
 7. **Feature Importance** – Visualize which features most influence loan approval decisions
 
+## Exploratory Data Analysis
+
+A quick look at the distribution of key applicant attributes:
+
+<table>
+  <tr>
+    <td><img src="images/gender_distribution.png" width="400"/></td>
+    <td><img src="images/marital_status_distribution.png" width="400"/></td>
+  </tr>
+  <tr>
+    <td><img src="images/dependents_distribution.png" width="400"/></td>
+    <td><img src="images/self_employed_distribution.png" width="400"/></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center"><img src="images/credit_history_distribution.png" width="400"/></td>
+  </tr>
+</table>
+
 ## Results
 
 The Random Forest model achieved:
@@ -34,6 +52,12 @@ The Random Forest model achieved:
 ```
 
 The model performs strongly at identifying approved loans (high recall), though it's more conservative when flagging rejections — worth keeping in mind if this were extended toward production use.
+
+### Feature Importance
+
+![Feature Importance](images/feature_importance.png)
+
+`Credit_History` is by far the strongest predictor of loan approval, consistent with real-world lending practices.
 
 ## Tech Stack
 
